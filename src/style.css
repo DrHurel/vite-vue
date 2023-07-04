@@ -30,28 +30,104 @@ body {
   place-content: center;
   min-width: 320px;
   min-height: 100vh;
+
 }
 
 
 .formContainer {
   max-height: 80vh;
   display: grid;
-  border: 1px solid blue;
+ 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
+  background-color: white;
+  color: var(--dark-navy, #242742);
+  border-radius: 30px;
+  padding: 2rem;
+  gap: 2rem;
 
 }
 
 .formContainer form {
-  border: 1px solid red;
+ 
   grid-column: 1 / 2;
   grid-row: 2/3; 
+  display: flex;
+  flex-direction: column;
+
+  
+
 }
 
+.formContainer form input{
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.formContainer form input:focus{
+  outline: none;
+  border: 1px solid #646cff;
+}
+
+.formContainer form button{
+  background-color: #646cff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+
+
 .formContainer img {
-  border: 1px solid green;
+
   grid-column: 2 / 3;
   grid-row: 1/3;
-    
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  object-position: 50% 50%;
+
+}
+
+.confirmationMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+
+
+  background-color: white;
+  color: var(--dark-navy, #242742);
+  border-radius: 30px;
+  width: 30%;
+  padding: 3rem;
+  aspect-ratio: 1/1;
+  
+}
+
+.confirmationMessage h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+
+
+.confirmationMessage button {
+  background-color: #646cff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 100%;
 }
