@@ -18,6 +18,7 @@
 </script>
 
 <template>
+
   <section v-if="isValid">
     <!-- Success message start -->
     <h1>Thanks for subscribing!</h1>
@@ -33,7 +34,7 @@
     <!-- Success message end -->
   </section>
 
-  <section v-else="isValid">
+  <section v-else="isValid"  class="formContainer">
     <div>
       <h1>Stay updated!</h1>
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -59,7 +60,8 @@
       />
       <button type="submit">Subscribe to monthly newsletter</button>
     </form>
-
+    <img src="../assets/images/illustration-sign-up-desktop.svg" alt="">
   
   </section>
+
 </template>
