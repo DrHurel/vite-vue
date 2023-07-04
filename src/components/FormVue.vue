@@ -3,8 +3,11 @@
   import {ref} from 'vue'
 
   const isValid = ref(false)
+  const email = ref('')
 
   function submitForm() {
+    console.log('submitForm')
+    console.log(email.value)
     isValid.value = true
     return 0
   }
@@ -54,9 +57,11 @@
       <label for="email-input">
         Email address
       </label>
-      <input
+      <input 
         type="email"
         name="email"
+        
+        v-model="email"
         placeholder="email@company.com"
         required
         id="email-input"
